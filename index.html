@@ -24,19 +24,34 @@
                 <div class="anothergrid">
                     <div id="try"><span id="myspan"><b>Try it free 7 days</b></span> then $20/mo. thereafter</div>
                     <div class="form">
-                        <form action="index.html" method="POST">
+                        <form action="/google.com" method="POST" id="form">
+                            
+                            <div class="form-control" >
                             <label for="fname"></label>
-                            <input type="text" id="fname" name="firstname" placeholder="First Name">
+                            <input type="text" id="fname" name="firstname" placeholder="First Name"><img src="images/icon-error.svg" width="20px" height="20px"></img><small>field cannot be empty</small>
+                            </div>
                         
+                            <div class="form-control">
                             <label for="lname"></label>
-                            <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                            <input type="text" id="lname" name="lastname" placeholder="Last Name"><img src="images/icon-error.svg" width="20px" height="20px"></img><small>field cannot be empty</small>
 
+                            </div>
+
+                        
+                            
+                            <div class="form-control">
                             <label for="email"></label>
-                            <input type="email" id="email" name="email" placeholder="Email">
+                            <input type="email" id="email" name="email" placeholder="Email"><img src="images/icon-error.svg" width="20px" height="20px"></img><small>field cannot be empty</small>
+                            </div>
+                        
 
+                            <div class="form-control">
                             <label for="password"></label>
                             <input type="password" id="password" name="password" placeholder="Password">
+                        <img src="images/icon-error.svg" width="20px" height="20px"></img><small>field cannot be empty</small>
+                            </div>
                         
+                    
                             <input type="submit" value="CLAIM YOUR FREE TRIAL">
                             <p>By clicking the button, you are agreeing to our <span id="smalltext">terms and conditions</span></p>
                         </form>
@@ -45,5 +60,6 @@
             </div>
     </main>
     <footer></footer>
+    <script src="script.js"></script>
 </body>
 </html>

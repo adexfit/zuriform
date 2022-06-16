@@ -15,7 +15,7 @@ p{
 
 .textcontent p{
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     font-family: Poppins;
 }
 
@@ -23,6 +23,7 @@ form p, #smalltext{
     font-size: 9px;
     text-align: center;
     color: hsl(246, 25%, 77%);
+    font-family: Poppins;
 }
 
 #smalltext{
@@ -55,7 +56,7 @@ h1{
     background-color: hsl(0, 100%, 74%);
     width: 70%;
     column-gap: 20px;
-    padding: 60px 40px 60px 40px;
+    padding: 20px 40px 20px 40px;
     margin: auto;
     background-image: url("images/bg-intro-desktop.png");
     
@@ -86,10 +87,10 @@ input[type=text],input[type=email], input[type=password], input[type=submit] {
     border-radius: 4px;
     box-sizing: border-box;
   }
-
+/*
   input[type=text]:focus,input[type=email]:focus, input[type=password]:focus{
-      border-color: 1px solid hsl(246, 25%, 77%);
-  }
+      border-color: 1px solid hsl(246, 25%, 77%);  
+  }*/
 
   input[type=submit]{
       color: white;
@@ -113,7 +114,44 @@ input[type=text],input[type=email], input[type=password], input[type=submit] {
       justify-content: center;
       padding: 10px 10px 10px 10px;
   }
+  
+  .form-control{
+      margin-bottom: 0px;
+      padding-bottom: 10px;
+      position: relative;
+  }
 
+  .form-control.error input {
+	border-color: hsl(0, 100%, 74%);
+}
+  .form-control img {
+      position: absolute;
+      top:20px;
+      right: 12px;
+      visibility: hidden;
+  }
+
+  .form-control.error img {
+    position: absolute;
+    top:20px;
+    right: 12px;
+    visibility: visible;
+}
+  
+  .form-control small{
+      color: hsl(0, 100%, 74%);
+      position: absolute;
+      bottom: 0;
+      left: 159px;
+      visibility: hidden;
+      font-family: Poppins;
+      font-size: 10px;
+  }
+
+  .form-control.error small {
+	visibility: visible;
+}
+  
   @media only screen and (min-width: 480px) {
     .workDiv{
         display: grid;
