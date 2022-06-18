@@ -19,22 +19,30 @@ function checkInputs() {
 	
 	if(fnameValue === '') {
 		setErrorFor(fname, 'firstname cannot be empty');
+	} else {
+		setSuccessFor(fname);
 	} 
 	
 	if(lnameValue === '') {
 
 		setErrorFor(lname, 'last name cannot be empty');
+	} else {
+		setSuccessFor(lname);
 	} 
 	
 	if(emailValue === '') {
 		setErrorFor(email, 'Looks like this is not an email');
 	} else if (!isEmail(emailValue)) {
 		setErrorFor(email, 'Looks like this is not an email');
+	} else {
+		setSuccessFor(email);
 	} 
 	
 	if(passwordValue === '') {
 		setErrorFor(password, 'Password cannot be empty');
-	} 
+	}  else {
+		setSuccessFor(password);
+	}
 	
 }
 
@@ -43,6 +51,11 @@ function setErrorFor(input, message) {
 	const small = formControl.querySelector('small');
 	formControl.className = 'form-control error';
 	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
 }
 	
 function isEmail(email) {
